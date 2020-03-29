@@ -3,7 +3,9 @@ import arcade
 
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 600
-SAND_PARTICLES = 60
+
+FISH_WIDTH = 85
+FISH_HEIGHT = 35
 
 
 def draw_sand():
@@ -155,6 +157,7 @@ positions4 = {
 def on_draw(delta_time):
     arcade.start_render()
 
+
     draw_sand()
     draw_vegetatianl(0, 0)
     draw_vegetatianl(60,60)
@@ -186,6 +189,7 @@ def on_draw(delta_time):
     speed_bubbles_ud = 10
     positions4["x"] += speed_bubbles_lr
     positions4["y"] += speed_bubbles_ud
+ 
 
 def main():
     arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, "Underwater")
